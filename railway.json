@@ -1,0 +1,4 @@
+{
+  "build": "dotnet publish BoxSellerWebApp/BoxSellerWebApp.csproj -c Release -o out",
+  "start": "dotnet out/BoxSellerWebApp.dll"
+}
