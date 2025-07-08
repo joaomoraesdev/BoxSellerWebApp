@@ -1,4 +1,4 @@
-﻿namespace WebAppML.Database
+﻿namespace BoxSellerWebApp.Database
 {
     public class MongoDBSettings
     {

@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace WebAppML.Entity
+namespace BoxSellerWebApp.Entity
 {
     public class Foto
     {

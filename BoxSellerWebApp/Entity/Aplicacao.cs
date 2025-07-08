@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 
-namespace WebAppML.Entity
+namespace BoxSellerWebApp.Entity
 {
     public class Aplicacao
     {

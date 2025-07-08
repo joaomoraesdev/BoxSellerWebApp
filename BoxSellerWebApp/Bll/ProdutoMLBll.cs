@@ -1,8 +1,8 @@
 ﻿using MongoDB.Driver;
 using System.Net.Http.Headers;
-using WebAppML.Entity;
+using BoxSellerWebApp.Entity;
 
-namespace WebAppML.Bll
+namespace BoxSellerWebApp.Bll
 {
     public class ProdutoMLBll // DELETAR!!!!!!!!!!!
     {

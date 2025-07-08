@@ -3,9 +3,9 @@ using MongoDB.Driver;
 using System.Collections;
 using System.Text.Json;
 using System.Threading.Tasks;
-using WebAppML.Entity;
+using BoxSellerWebApp.Entity;
 
-namespace WebAppML.Bll
+namespace BoxSellerWebApp.Bll
 {
     public class AplicacaoBll
     {

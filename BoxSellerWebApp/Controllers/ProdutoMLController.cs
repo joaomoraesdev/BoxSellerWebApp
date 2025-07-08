@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ActionConstraints;
 using System.Net.Http.Headers;
-using WebAppML.Bll;
-using WebAppML.Entity;
+using BoxSellerWebApp.Bll;
+using BoxSellerWebApp.Entity;
 
-namespace WebAppML.Controllers
+namespace BoxSellerWebApp.Controllers
 {
     public class ProdutoMLController : Controller
     {

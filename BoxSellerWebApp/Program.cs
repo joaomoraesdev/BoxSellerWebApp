@@ -2,9 +2,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using System.Diagnostics;
-using WebAppML.Bll;
-using WebAppML.Database;
-using WebAppML.Entity;
+using BoxSellerWebApp.Bll;
+using BoxSellerWebApp.Database;
+using BoxSellerWebApp.Entity;
 using static System.Net.Mime.MediaTypeNames;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -53,6 +53,10 @@ builder.Services.AddHttpClient();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Porta para Railway
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+builder.WebHost.UseUrls($"http://*:{port}");
 
 var app = builder.Build();
 

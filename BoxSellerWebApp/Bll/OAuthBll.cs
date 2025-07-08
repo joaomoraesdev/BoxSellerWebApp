@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
-using WebAppML.Entity;
+using BoxSellerWebApp.Entity;
 
-namespace WebAppML.Bll
+namespace BoxSellerWebApp.Bll
 {
     public class OAuthBll // DELETAR!!!!!!!
     {

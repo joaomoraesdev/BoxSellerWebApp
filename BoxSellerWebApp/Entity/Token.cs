@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace WebAppML.Entity
+namespace BoxSellerWebApp.Entity
 {
     public class Token
     {

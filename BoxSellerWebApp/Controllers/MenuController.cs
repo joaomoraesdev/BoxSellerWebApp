@@ -1,11 +1,11 @@
 ﻿using BoxSellerWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using WebAppML.Bll;
-using WebAppML.Entity;
-using WebAppML.Models;
+using BoxSellerWebApp.Bll;
+using BoxSellerWebApp.Entity;
+using BoxSellerWebApp.Models;
 
-namespace WebAppML.Controllers
+namespace BoxSellerWebApp.Controllers
 {
     public class MenuController : Controller
     {

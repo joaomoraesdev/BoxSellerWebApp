@@ -2,10 +2,10 @@
 using Newtonsoft.Json.Linq;
 using System.ComponentModel;
 using System.Text.Json;
-using WebAppML.Bll;
-using WebAppML.Entity;
+using BoxSellerWebApp.Bll;
+using BoxSellerWebApp.Entity;
 
-namespace WebAppML.Controllers
+namespace BoxSellerWebApp.Controllers
 {
     public class OAuthController : Controller
     {

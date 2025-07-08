@@ -1,4 +1,4 @@
-﻿namespace WebAppML.Entity
+﻿namespace BoxSellerWebApp.Entity
 {
     public abstract class URLsML
     {

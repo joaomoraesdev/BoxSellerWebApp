@@ -1,9 +1,9 @@
 using System.Diagnostics;
 using BoxSellerWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
-using WebAppML.Models;
+using BoxSellerWebApp.Models;
 
-namespace WebAppML.Controllers;
+namespace BoxSellerWebApp.Controllers;
 
 public class HomeController : Controller
 {
