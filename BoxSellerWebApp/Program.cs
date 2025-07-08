@@ -55,8 +55,8 @@ builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
 
 // Porta para Railway
-var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
-builder.WebHost.UseUrls($"http://*:{port}");
+//var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+//builder.WebHost.UseUrls($"http://*:{port}");
 
 var app = builder.Build();
 
