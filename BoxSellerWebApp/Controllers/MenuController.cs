@@ -9,10 +9,10 @@ namespace BoxSellerWebApp.Controllers
 {
     public class MenuController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<MenuController> _logger;
         private readonly AplicacaoBll aplicacaoBll;
 
-        public MenuController(ILogger<HomeController> logger, AplicacaoBll _appBll)
+        public MenuController(ILogger<MenuController> logger, AplicacaoBll _appBll)
         {
             _logger = logger;
             aplicacaoBll = _appBll;
