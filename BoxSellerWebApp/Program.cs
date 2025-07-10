@@ -69,19 +69,19 @@ if (!app.Environment.IsDevelopment())
 }
 
 // === ABRE A URL DO NGROK AO INICIAR ===
-var ngrokUrl = "https://6246-177-161-241-125.ngrok-free.app"; // coloque sua URL do ngrok aqui
-try
-{
-    Process.Start(new ProcessStartInfo
-    {
-        FileName = ngrokUrl,
-        UseShellExecute = true // necessário para abrir com o navegador padrão
-    });
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Erro ao abrir navegador: {ex.Message}");
-}
+//var ngrokUrl = "https://6246-177-161-241-125.ngrok-free.app"; // coloque sua URL do ngrok aqui
+//try
+//{
+//    Process.Start(new ProcessStartInfo
+//    {
+//        FileName = ngrokUrl,
+//        UseShellExecute = true // necessário para abrir com o navegador padrão
+//    });
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine($"Erro ao abrir navegador: {ex.Message}");
+//}
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
