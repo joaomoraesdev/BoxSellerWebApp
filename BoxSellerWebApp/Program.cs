@@ -87,6 +87,13 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseStaticFiles();
+// debug temporario
+app.Use(async (context, next) =>
+{
+    Console.WriteLine("PATH REQUESTED: " + context.Request.Path);
+    await next();
+});
+
 app.UseRouting();
 app.UseSession();
 
