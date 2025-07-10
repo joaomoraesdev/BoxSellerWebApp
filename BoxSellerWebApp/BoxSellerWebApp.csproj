@@ -12,10 +12,4 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
-  <Target Name="EnsureStaticFilesPublished" AfterTargets="ComputeFilesToPublish">
-    <ItemGroup>
-      <ResolvedFileToPublish Include="wwwroot\**\*" />
-    </ItemGroup>
-  </Target>
-
 </Project>
