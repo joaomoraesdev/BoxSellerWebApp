@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="~/css/cadastroProduto.css">
+    <link rel="stylesheet" href="@(Url.Content("~/css/cadastroProduto.css"))">
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -15,7 +15,7 @@
             crossorigin="anonymous"></script>
 
     <!-- Script personalizado (corrigido para ambiente ASP.NET, se aplicável) -->
-    <script src="~/js/produtoML.js"></script>
+    <script src="@(Url.Content("~/js/produtoML.js"))"></script>
 </head>
 <body>
     <div class="container mt-5">
