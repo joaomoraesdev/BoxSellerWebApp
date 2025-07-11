@@ -7,7 +7,6 @@
 # Artefatos de build do .NET
 bin/
 obj/
-out/
 *.user
 *.suo
 *.vs/
