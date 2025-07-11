@@ -16,11 +16,4 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
-  <!-- Garante que views e arquivos estáticos sejam copiados -->
-  <ItemGroup>
-    <Content Include="Views\**\*.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
 </Project>
