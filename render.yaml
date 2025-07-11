@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: boxseller-webapp
+    env: docker
+    plan: free
+    repo: https://github.com/joaomoraesdev/BoxSellerWebApp
+    branch: main
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
