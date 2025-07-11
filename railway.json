@@ -2,7 +2,7 @@
   "build": {
     "root": "BoxSellerWebApp",
     "buildCommand": "dotnet publish BoxSellerWebApp/BoxSellerWebApp.csproj -c Release -o out",
-    "startCommand": "dotnet out/BoxSellerWebApp.dll"
+    "startCommand": "dotnet BoxSellerWebApp/out/BoxSellerWebApp.dll"
   }
 }
 
