@@ -86,13 +86,11 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseStaticFiles();
-// debug temporario
-app.Use(async (context, next) =>
+app.UseStaticFiles(new StaticFileOptions
 {
-    Console.WriteLine("PATH REQUESTED: " + context.Request.Path);
-    await next();
+    RequestPath = "/BoxSellerWebApp/wwwroot"
 });
+app.UsePathBase("/BoxSellerWebApp/wwwroot");
 
 app.UseRouting();
 app.UseSession();
