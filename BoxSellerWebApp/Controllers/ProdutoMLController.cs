@@ -22,7 +22,7 @@ namespace BoxSellerWebApp.Controllers
         public IActionResult MenuProduto()
         {
             ViewBag.NomeAplicacao = HttpContext.Session.GetString("NomeAplicacao");
-            return View("~/Views/MercadoLivre/MenuProduto.cshtml");
+            return View("~/Views/ML/MenuProduto.cshtml");
         }
 
         [HttpGet]
