@@ -1,20 +1,20 @@
 # Etapa 1: build
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /app
+WORKDIR /src
 
-# Copia tudo e restaura dependências
-COPY . . 
-WORKDIR /app/BoxSellerWebApp
+# Copia tudo para dentro da imagem
+COPY . .
+
+# Restaura e publica a aplicação a partir da subpasta
+WORKDIR /src/BoxSellerWebApp
 RUN dotnet restore
-
-# Publica o projeto
 RUN dotnet publish -c Release -o /app/out
 
 # Etapa 2: runtime
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
 WORKDIR /app
 
-# Copia arquivos da publicação
+# Copia os arquivos publicados da etapa anterior
 COPY --from=build /app/out ./
 
 # Expõe a porta usada pela aplicação
