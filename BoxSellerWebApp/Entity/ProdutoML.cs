@@ -1,15 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace BoxSellerWebApp.Entity
 {
-    public class ProdutoML
+    public class ProdutoMLCreateDto
     {
-        [JsonPropertyName("id")]
-        public string Id { get; set; }
-
         [JsonPropertyName("title")]
-        public string Title { get; set; }
+        public string Titulo { get; set; }
 
         [JsonPropertyName("category_id")]
         public string IdCategoria { get; set; }
@@ -24,13 +20,13 @@ namespace BoxSellerWebApp.Entity
         public int QtdDisponivel { get; set; }
 
         [JsonPropertyName("buying_mode")]
-        public string ModoCompra { get; set; }
+        public string ModoCompra { get; set; }  // Ex: "buy_it_now"
 
         [JsonPropertyName("condition")]
-        public string Condicao { get; set; }
+        public string Condicao { get; set; }  // Ex: "new"
 
         [JsonPropertyName("listing_type_id")]
-        public string IdTipoListagem { get; set; }
+        public string IdTipoListagem { get; set; }  // Ex: "gold_special"
 
         [JsonPropertyName("sale_terms")]
         public List<TermoVenda> TermoVendas { get; set; }

@@ -21,33 +21,85 @@
     <div class="container mt-5">
         <h1 class="display-4 text-center">@ViewBag.NomeAplicacao</h1>
         <br />
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <div class="camposPesquisa">
-                <input id="txtPesquisaProduto" placeholder="Pesquisar produto" />
-                <button id="btnPesquisarProduto" type="button" class="btn btn-primary">Pesquisar Produto</button>
-            </div>
-            <div class="botoes">
-                <button id="btnCadastrarProduto" type="button" class="btn btn-primary">Cadastrar Produto</button>
-                <label class="switch">
-                    <input id="switchProdutoTeste" type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <label>Produto Teste</label>
-            </div>
-        </div>
-        <table id="tblProdutosML" class="table table-bordered table-striped mt-4">
-            <thead class="table-dark">
-                <tr>
-                    <th>Id Produto</th>
-                    <th>Nome</th>
-                    <th>Quantidade Disponível</th>
-                    <th>Preço</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+        <h2>CADASTRO DE ANÚNCIOS</h2>
+
+        <h2>INFORMAÇÕES BÁSICAS</h2>
+
+        <p>Título:</p>
+        <input id="txtLogin" type="text" name="login" placeholder="Insira o título do anúncio" class="form-control" />
+
+        <p>Categoria:</p>
+        <select id="ddlCategoria" name="ddlCategoria" class="form-control">
+            <option readonly>Selecione uma categoria</option>
+            <option>Chave de Seta</option>
+            <option>Freio ABS</option>
+        </select>
+
+        <p>Preço:</p>
+        <input id="txtPreco" type="text" name="txtPreco" placeholder="Insira o preço do produto" class="form-control" />
+
+        <p>Moeda:</p>
+        <select id="ddlMoeda" name="ddlMoeda" class="form-control">
+            <option readonly>Selecione uma moeda</option>
+            <option>Real (R$)</option>
+            <option>Dólar (US$)</option>
+        </select>
+
+        <p>Quantidade disponível:</p>
+        <input id="txtQtdDisponivel" type="text" name="txtQtdDisponivel" placeholder="Insira o ID da aplicação" class="form-control" />
+
+        <p>Modo de Compra:</p>
+        <select id="ddlMoeda" name="ddlMoeda" class="form-control">
+            <option readonly>Selecione um modo de compra</option>
+            <option>Compre agora</option>
+        </select>
+
+        <p>Condição:</p>
+        <select id="ddlMoeda" name="ddlMoeda" class="form-control">
+            <option readonly>Selecione um modo de compra</option>
+            <option>Novo</option>
+            <option>Usado</option>
+        </select>
+
+        <p>Tipo Listagem:</p>
+        <select id="ddlTipoListagem" name="ddlTipoListagem" class="form-control">
+            <option readonly>Selecione um tipo de listagem</option>
+            <option>Gold Special</option>
+        </select>
+
+        <h2>TERMOS DE VENDAS</h2>
+
+        <p>Id:</p>
+        <select id="ddlIdTermoVenda" name="ddlIdTermoVenda" class="form-control">
+            <option readonly>Selecione um tipo de termo de venda</option>
+            <option>WARRANTY TYPE</option>
+            <option>WARRANTY TIME</option>
+        </select>
+
+        <p>Nome Valor:</p>
+        <input id="txtNomeValorTermoVenda" type="text" name="txtNomeValorTermoVenda" placeholder="Insira o nome valor do termo de venda" class="form-control" />
+
+        <button type="button" class="btn btn-primary">Adicionar Termo de Venda</button>
+
+        <h2>FOTOS</h2>
+
+        <p>Fonte:</p>
+        <input id="txtNomeValorTermoVenda" type="text" name="txtNomeValorTermoVenda" placeholder="Insira o nome valor do termo de venda" class="form-control" />
+        <button type="button" class="btn btn-primary">Adicionar fonte</button>
+
+        <h2>ATRIBUTOS</h2>
+
+        <p>Id:</p>
+        <select id="ddlIdAtrbutos" name="ddlIdTermoVenda" class="form-control">
+            <option readonly>Selecione um tipo de termo de venda</option>
+            <option>BRAND</option>
+            <option>EAN</option>
+        </select>
+
+        <p>Nome Valor:</p>
+        <input id="txtNomeValorAtributos" type="text" name="txtNomeValorTermoVenda" placeholder="Insira o nome valor do termo de venda" class="form-control" />
+
+        <button type="button" class="btn btn-primary">Adicionar atributos</button>
     </div>
 </body>
 </html>

@@ -55,10 +55,30 @@ builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
 
 // Porta para Railway
-var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+var port = Environment.GetEnvironmentVariable("PORT") ?? "7050";
 builder.WebHost.UseUrls($"http://*:{port}");
 
+// Configuração do CORS (Cross-Origin Resource Sharing) para permitir requisições de qualquer origem
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigins",
+    policy =>
+    {
+        policy.WithOrigins(
+                            "https://boxsellerwebapp.onrender.com",
+                            "https://localhost:7050",
+                            "http://localhost:7050"
+                          )
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials();
+    });
+});
+
 var app = builder.Build();
+
+// Ativando o CORS usando a política definida anteriormente
+app.UseCors("AllowSpecificOrigins");
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -77,5 +97,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Menu}/{action=Index}/{id?}");
+    //pattern: "{controller=ProdutoML}/{action=MenuProduto}/{id?}");
 
 app.Run();

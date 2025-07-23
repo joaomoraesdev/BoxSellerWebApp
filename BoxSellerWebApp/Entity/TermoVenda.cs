@@ -7,10 +7,13 @@ namespace BoxSellerWebApp.Entity
         [JsonPropertyName("id")]
         public string Id { get; set; }
 
-        [JsonPropertyName("value_name")]
-        public string NomeValor { get; set; }
+        [JsonPropertyName("name")]
+        public string Nome { get; set; }
 
         [JsonPropertyName("value_id")]
         public string IdValor { get; set; }
+
+        [JsonPropertyName("value_name")]
+        public string NomeValor { get; set; }
     }
 }

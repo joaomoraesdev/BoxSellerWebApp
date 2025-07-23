@@ -25,6 +25,12 @@ namespace BoxSellerWebApp.Controllers
             return View("~/Views/ML/MenuProduto.cshtml");
         }
 
+        public IActionResult CadastroProduto()
+        {
+            //ViewBag.NomeAplicacao = HttpContext.Session.GetString("NomeAplicacao");
+            return View("~/Views/ML/CadastroProduto.cshtml");
+        }
+
         [HttpGet]
         public async Task<JsonResult> PesquisarTodosProdutos() //Implementar revalidação de token
         {

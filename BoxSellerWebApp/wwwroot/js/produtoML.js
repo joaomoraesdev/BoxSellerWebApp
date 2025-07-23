@@ -1,11 +1,15 @@
 ﻿const base_path = window.location.origin;
 var listaProdutos = [];
+var produtoML;
 
 function produtoML() {
     var dto = {
         // Tela de Menu Produtos ML
         tblProdutosML: $('#tblProdutosML'),
         txtPesquisaProduto: $('#txtPesquisaProduto').val()
+
+        // Tela de Cadastro Produtos ML
+
     };
 
     function pesquisarTodosProdutos() {
@@ -83,12 +87,9 @@ function produtoML() {
 
     }
 
-    function telaCadastroProduto() {
+    function cadastroProduto() {
         $.ajax({
-            url: base_path + "/ProdutoML/PesquisarProduto",
-            data: {
-                idItem: id
-            },
+            url: base_path + "/ProdutoML/CadastroProduto",
             type: 'GET',
             dataType: 'html',
             success: function (data) {
@@ -107,13 +108,16 @@ function produtoML() {
         pesquisarTodosProdutos: pesquisarTodosProdutos,
         pesquisarProduto: pesquisarProduto,
         preencheTabelaProdutos: preencheTabelaProdutos,
-        limparTabela: limparTabela
+        limparTabela: limparTabela,
+        cadastroProduto: cadastroProduto
     }
 }
 
 // Garante que tudo está pronto para usar após o carregamento da página
 $(document).ready(function () {
+    produtoML = produtoML();
     produtoML().pesquisarTodosProdutos();
+
     $('#btnPesquisarProduto').on('click', function (e) {
         var idProduto = $('#txtPesquisaProduto').val();
         if ($('#txtPesquisaProduto').val() == '')
@@ -122,5 +126,9 @@ $(document).ready(function () {
             produtoML().limparTabela();
             produtoML().pesquisarProduto(idProduto);
         }
+    });
+
+    $('#btnCadastrarProduto').on('click', function (e) {
+        produtoML.cadastroProduto();
     });
 });
